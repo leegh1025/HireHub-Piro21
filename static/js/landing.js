@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // IntersectionObserver 설정
-  const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             if (!animatedElement.classList.contains('animate-on-focus')) {
