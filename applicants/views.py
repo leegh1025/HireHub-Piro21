@@ -417,7 +417,7 @@ def applicant_rankings(req):
         score_list = []
         for application in applications:
             # 팀을 자동설정 해주는 로직
-            if list(interview_team.members.all()) == list(application.interviewer.all()):
+            if set(interview_team.members.all()) == set(application.interviewer.all()):
                 application.interview_team = interview_team
                 application.save()
             # 설정된 팀을 가지고 
